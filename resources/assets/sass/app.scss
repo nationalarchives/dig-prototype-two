@@ -1,3 +1,4 @@
+$icon-font-path: '/fonts/';
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
@@ -7,3 +8,16 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Bootstrap dashboard example
+@import "bootstrap_dashboard";
+
+// Dig styles
+@import "variables";
+@import "global";
+@import "notification-panel";
+@import "sidebar";
+@import "transfer";
+@import "search-results";
+@import "drag&drop";
+@import "authentication";
