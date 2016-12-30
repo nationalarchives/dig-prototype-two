@@ -13,7 +13,16 @@ return [
     */
 
     'collections_heading' => ':name collections',
-    'series_type' => 'Series type: :type',
+    'series' => [
+        'type' => 'Series type: :type',
+        'preamble' => 'This page provides an opportunity to view a summary of the uploaded metadata for the complete series and view transfer batches that have been added to the series so far.',
+        'summary_heading' => 'Summary of uploaded metadata for :series',
+        'name' => 'Name',
+        'reference' => 'Reference',
+        'description' => 'Description',
+        'parent_collection' => 'Parent collection',
+        'transferring_department' => 'Transferring department'
+    ],
     'departments' => 'Departments',
     'navigation' => [
         'heading' => 'Dashboard',

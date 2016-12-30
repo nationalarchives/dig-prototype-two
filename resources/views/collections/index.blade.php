@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        {{ trans('editorial.series_type', ['type' => $series->type]) }}
+                        {{ trans('editorial.series.type', ['type' => $series->type]) }}
                     </div>
                 </div>
             </a>

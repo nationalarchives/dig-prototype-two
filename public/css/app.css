@@ -7986,10 +7986,6 @@ a:hover .panel-body {
   text-decoration: underline;
 }
 
-.table tr td:first-of-type {
-  font-weight: bold;
-}
-
 .search-results a {
   text-decoration: none;
 }
