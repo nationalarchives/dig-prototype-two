@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1 class="page-header">{{ Auth::user()->department->name }} collections</h1>
+    <h1 class="page-header">{{ trans('editorial.collections_heading', ['name' => Auth::user()->department->name]) }}</h1>
     @foreach($collections as $collection)
         <h2 class="sub-header">{{ $collection->reference }}: {{ $collection->name }}</h2>
 
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        Series type: {{ $series->type }}
+                        {{ trans('editorial.series_type', ['type' => $series->type]) }}
                     </div>
                 </div>
             </a>

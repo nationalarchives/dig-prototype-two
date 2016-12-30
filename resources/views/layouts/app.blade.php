@@ -5,7 +5,7 @@
 <div id="app">
     @include('partials.navbar')
 
-    <div class="row" style="margin-top: 4em;">
+    <div class="authentication">
         @yield('content')
     </div>
 </div>

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1 class="page-header">Departments</h1>
+    <h1 class="page-header">{{ trans('editorial.departments') }}</h1>
     <ul>
         @foreach($departments as $department)
             <li>

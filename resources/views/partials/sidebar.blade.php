@@ -4,13 +4,14 @@
     </div>
     @include('partials.search-form')
 
-    <h3>Dashboard</h3>
+    <h3>{{ trans('editorial.navigation.heading') }}</h3>
     <ul class="nav nav-sidebar">
-        <li><a href="#">My transfers</a></li>
-        <li><a href="#">My records</a></li>
+        @foreach(trans('editorial.navigation.links') as $link)
+            <li><a href="#">{{ $link }}</a></li>
+        @endforeach
     </ul>
     @include('partials.guidance')
-    <h3>Messages</h3>
+    <h3>{{ trans('editorial.messages.heading') }}</h3>
     <ul class="nav nav-sidebar">
         <li><a href="">Message centre</a></li>
     </ul>
