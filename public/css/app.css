@@ -7920,16 +7920,16 @@ a:hover .panel-body {
   display: inline-block;
 }
 
-.individual-transfer .panel-heading {
+.individual-series .panel-heading {
   position: relative;
   padding-right: 7em;
 }
 
-.individual-transfer .panel-heading h3 {
+.individual-series .panel-heading h3 {
   line-height: 140%;
 }
 
-.individual-transfer .panel-heading span.label {
+.individual-series .panel-heading span.label {
   position: absolute;
   top: 1em;
   right: 1em;

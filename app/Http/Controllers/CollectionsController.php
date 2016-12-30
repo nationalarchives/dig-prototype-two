@@ -12,4 +12,9 @@ class CollectionsController extends Controller
         $collections = Collection::all();
         return view('collections.index', compact('collections'));
     }
+
+    public function series()
+    {
+
+    }
 }

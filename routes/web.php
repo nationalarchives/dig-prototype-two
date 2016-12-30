@@ -17,4 +17,6 @@ Route::get('departments', 'DepartmentsController@index');
 
 Route::get('collections', 'CollectionsController@index');
 
+Route::get('series/{series}', 'SeriesController@show');
+
 Auth::routes();

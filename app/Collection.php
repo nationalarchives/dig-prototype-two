@@ -10,4 +10,9 @@ class Collection extends Model
     {
         return $this->belongsTo(Department::class);
     }
+
+    public function series()
+    {
+        return $this->hasMany(Series::class);
+    }
 }
