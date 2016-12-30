@@ -10,4 +10,9 @@ class Batch extends Model
     {
         return $this->belongsTo(Series::class);
     }
+
+    public function records()
+    {
+        return $this->hasMany(Record::class);
+    }
 }

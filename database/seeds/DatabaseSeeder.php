@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
          $this->call(CollectionTableSeeder::class);
          $this->call(SeriesTableSeeder::class);
          $this->call(BatchesTableSeeder::class);
+         $this->call(RecordsTableSeeder::class);
     }
 }

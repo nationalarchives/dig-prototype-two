@@ -26,6 +26,18 @@ return [
             'heading' => 'Batches within series :series'
         ]
     ],
+    'records' => [
+        'reference' => 'Reference',
+        'title' => 'Title',
+        'description' => 'Description',
+        'department' => 'Department',
+        'legal_status' => 'Legal status',
+        'date' => 'Date',
+        'closure_status_description' => 'Closure status',
+        'document_is_open' => 'Document',
+        'description_is_open' => 'Description',
+        'records_relating_to' => 'Records relating to'
+    ],
     'departments' => 'Departments',
     'navigation' => [
         'heading' => 'Dashboard',

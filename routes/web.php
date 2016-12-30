@@ -21,4 +21,6 @@ Route::get('series/{series}', 'SeriesController@show');
 
 Route::get('batch/{batch}', 'BatchesController@show');
 
+Route::get('record/{record}', 'RecordsController@show');
+
 Auth::routes();
