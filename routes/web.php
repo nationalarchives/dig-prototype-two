@@ -15,4 +15,6 @@ Route::get('/', 'HomeController@index');
 
 Route::get('departments', 'DepartmentsController@index');
 
+Route::get('collections', 'CollectionsController@index');
+
 Auth::routes();

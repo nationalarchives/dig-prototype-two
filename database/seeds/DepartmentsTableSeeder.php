@@ -12,7 +12,7 @@ class DepartmentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('departments')->insert([
-            'name' => 'The Home Office',
+            'name' => 'Home Office',
         ]);
     }
 }

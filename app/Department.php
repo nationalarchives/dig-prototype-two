@@ -10,4 +10,9 @@ class Department extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function collections()
+    {
+        return $this->hasMany(Collection::class);
+    }
 }
