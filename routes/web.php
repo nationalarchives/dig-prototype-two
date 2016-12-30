@@ -19,4 +19,6 @@ Route::get('collections', 'CollectionsController@index');
 
 Route::get('series/{series}', 'SeriesController@show');
 
+Route::get('batch/{batch}', 'BatchesController@show');
+
 Auth::routes();

@@ -29,6 +29,14 @@
             </table>
         </div>
         <div class="col-md-6">
+            <h2 class="sub-title">{{ trans('editorial.series.batches.heading', [ 'series' => $series->reference ]) }}</h2>
+            <ul class="list-group">
+                @foreach($series->batches as $batch)
+                    <li class="list-group-item">
+                        <a href="/batch/{{$batch->id}}">{{ $batch->name }}</a>
+                    </li>
+                @endforeach
+            </ul>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ trans('editorial.series.summary_heading', ['series' => $series->reference ]) }}</h3>

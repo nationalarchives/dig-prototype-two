@@ -21,7 +21,10 @@ return [
         'reference' => 'Reference',
         'description' => 'Description',
         'parent_collection' => 'Parent collection',
-        'transferring_department' => 'Transferring department'
+        'transferring_department' => 'Transferring department',
+        'batches' => [
+            'heading' => 'Batches within series :series'
+        ]
     ],
     'departments' => 'Departments',
     'navigation' => [

@@ -10,4 +10,9 @@ class Series extends Model
     {
         return $this->belongsTo(Collection::class);
     }
+
+    public function batches()
+    {
+        return $this->hasMany(Batch::class);
+    }
 }
