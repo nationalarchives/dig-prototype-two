@@ -11,10 +11,8 @@ class BatchesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('batches')->insert([
-            'name' => 'First batch of series',
-            'series_id' => '1',
-            'type' => 'Born digital'
-        ]);
+        foreach (\App\Series::all() as $series) {
+            $batch = factory(App\Batch::class, rand(1, 5))->create(['series_id' => $series->id]);
+        }
     }
 }

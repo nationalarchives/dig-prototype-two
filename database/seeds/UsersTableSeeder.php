@@ -17,5 +17,12 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('password'),
             'department_id' => 1
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Punal Chotrani',
+            'email' => 'punal.chotrani@nationalarchives.gsi.gov.uk',
+            'password' => bcrypt('password'),
+            'department_id' => 1
+        ]);
     }
 }
