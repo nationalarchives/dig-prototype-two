@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home.index');
 
 Route::get('departments', 'DepartmentsController@index');
 
@@ -19,9 +19,9 @@ Route::get('collections', 'CollectionsController@index');
 
 Route::get('collections/{collection}', 'CollectionsController@show')->name('collections.show');
 
-Route::get('series/{series}', 'SeriesController@show');
+Route::get('series/{series}', 'SeriesController@show')->name('series.show');
 
-Route::get('batch/{batch}', 'BatchesController@show');
+Route::get('batch/{batch}', 'BatchesController@show')->name('batches.show');
 
 Route::get('record/{record}', 'RecordsController@show');
 

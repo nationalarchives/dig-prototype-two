@@ -1,5 +1,10 @@
 @extends('layouts.dashboard')
 
+@section('page_specific_breadcrumbs')
+    <li><a href="{{ route('collections.show', ['id' => $series->collection->id] )}}">{{ $series->collection->reference }}</a></li>
+    <li class="active">{{ $series->reference }}</li>
+@endsection
+
 @section('content')
     <h1 class="page-header">{{ $series->name }}</h1>
     <p>{{ trans('editorial.series.preamble') }}</p>

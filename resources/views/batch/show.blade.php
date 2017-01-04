@@ -1,5 +1,11 @@
 @extends('layouts.dashboard')
 
+@section('page_specific_breadcrumbs')
+    <li><a href="{{ route('collections.show', ['id' => $batch->series->collection->id] )}}">{{ $batch->series->collection->reference }}</a></li>
+    <li><a href="{{ route('series.show', ['id' => $batch->series->id] )}}">{{ $batch->series->reference }}</a></li>
+    <li class="active">{{ $batch->name }}</li>
+@endsection
+
 @section('content')
     <h1 class="page-header">{{ $batch->name }}</h1>
     <div class="row">
