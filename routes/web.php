@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@index')->name('home.index');
 
 Route::get('departments', 'DepartmentsController@index');
 
-Route::get('collections', 'CollectionsController@index');
+Route::get('collections', 'CollectionsController@index')->name('collections.index');
 
 Route::get('collections/{collection}', 'CollectionsController@show')->name('collections.show');
 

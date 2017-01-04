@@ -45,7 +45,12 @@ return [
     'departments' => 'Departments',
     'navigation' => [
         'heading' => 'Dashboard',
-        'links' => ['My collections', 'My series']
+        'links' => [
+        	[
+		        'route' => 'collections.index',
+		        'text' => 'My collections'
+	        ]
+        ]
     ],
     'messages' => [
         'heading' => 'Messages',

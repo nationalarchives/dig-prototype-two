@@ -7,7 +7,7 @@
     <h3>{{ trans('editorial.navigation.heading') }}</h3>
     <ul class="nav nav-sidebar">
         @foreach(trans('editorial.navigation.links') as $link)
-            <li><a href="#">{{ $link }}</a></li>
+            <li><a href="{{ route($link['route']) }}">{{ $link['text'] }}</a></li>
         @endforeach
     </ul>
     @include('partials.guidance')
