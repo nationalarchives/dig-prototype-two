@@ -1,8 +1,11 @@
 @extends('layouts.dashboard')
 
+@section('page_specific_breadcrumbs')
+    <li class="active">{{ $collection->reference }}</li>
+@endsection
+
 @section('content')
     <h1 class="page-header">{{ $collection->name }}</h1>
-    <div class="row">
         @foreach($collection->series as $series)
             <a href="/series/{{$series->id}}">
                 <div class="panel panel-default individual-series">
@@ -24,7 +27,6 @@
                 </div>
             </a>
         @endforeach
-    </div>
 @endsection
 
 

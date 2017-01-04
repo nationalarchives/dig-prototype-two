@@ -1,8 +1,12 @@
 @extends('layouts.dashboard')
 
+@section('page_specific_breadcrumbs')
+    <li class="active">{{ trans('editorial.collections.breadcrumb_active') }}</li>
+@endsection
+
 @section('content')
-    <h1 class="page-header">{{ trans('editorial.collections_heading', ['name' => Auth::user()->department->name]) }}</h1>
-    <p>{{ trans('editorial.collections_description', ['collection_number' => count($collections), 'name' => Auth::user()->department->name]) }}</p>
+    <h1 class="page-header">{{ trans('editorial.collections.heading', ['name' => Auth::user()->department->name]) }}</h1>
+    <p>{{ trans('editorial.collections.description', ['collection_number' => count($collections), 'name' => Auth::user()->department->name]) }}</p>
     <div class="row">
         @foreach($collections as $collection)
             <div class="col-sm-6 col-md-4">
