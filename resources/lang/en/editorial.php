@@ -15,7 +15,17 @@ return [
     'collections' => [
         'heading' => ':name collections',
         'description' => ' The :collection_number registered collections for :name are shown below',
-        'breadcrumb_active' => 'Collections'
+        'breadcrumb_active' => 'Collections',
+        'create' => [
+            'breadcrumb_active' => 'Create a new collection',
+            'title' => 'Create collection',
+            'reference' => 'Collection reference',
+            'name' => 'Collection name',
+            'submit_button' => 'Create collection'
+        ],
+        'store' => [
+            'success_message' => 'Collection :reference created successfully'
+        ]
     ],
     'series' => [
         'type' => 'Series type: :type',

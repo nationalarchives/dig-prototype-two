@@ -17,6 +17,10 @@ Route::get('departments', 'DepartmentsController@index');
 
 Route::get('collections', 'CollectionsController@index')->name('collections.index');
 
+Route::get('collections/create', 'CollectionsController@create')->name('collections.create');
+
+Route::post('collections/store', 'CollectionsController@store')->name('collections.store');
+
 Route::get('collections/{collection}', 'CollectionsController@show')->name('collections.show');
 
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
