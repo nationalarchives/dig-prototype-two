@@ -13,6 +13,7 @@ return [
     */
 
     'collections_heading' => ':name collections',
+    'collections_description' => ' The :collection_number registered collections for :name are shown below',
     'series' => [
         'type' => 'Series type: :type',
         'preamble' => 'This page provides an opportunity to view a summary of the uploaded metadata for the complete series and view transfer batches that have been added to the series so far.',

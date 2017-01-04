@@ -13,8 +13,8 @@ class CollectionsController extends Controller
         return view('collections.index', compact('collections'));
     }
 
-    public function series()
+    public function show(Request $request, Collection $collection)
     {
-
+        return view('collections.show', compact('collection'));
     }
 }
