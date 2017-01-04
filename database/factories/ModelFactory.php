@@ -25,34 +25,33 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Series::class, function (Faker\Generator $faker) {
     return [
-        'reference' => 'BT95',
-        'name' => 'Board of Trade: Companies Registration Office: Files of Dissolved Companies',
-        'description' => '	
-The Companies Registration Office classified index provides particulars of dissolved exempt private companies. They contain administrative summary information regarding the dissolved company. The summary information concerns mainly the capital and the area of the company work. These were maintained in paper format until 1986. From 1986, computerised databases were used to record the information: the STEM and PUBL databases',
-        'transfer_status' => 'Schema agreed',
-        'type' => 'Born Digital',
+        'reference' => 'SER.REF',
+        'name' => 'Example series name',
+        'description' => 'Example series description',
+        'transfer_status' => 'Example transfer status',
+        'type' => 'Example transfer type',
         'collection_id' => '1'
     ];
 });
 
 $factory->define(App\Batch::class, function (Faker\Generator $faker) {
     return [
-        'name' => 'Unnamed batch',
+        'name' => 'Example batch name',
         'series_id' => '1',
-        'type' => 'Born digital',
+        'type' => 'Example batch type',
         'received' => $faker->dateTimeBetween($statDate = '-1 years', $endDate = 'now', $timezone = date_default_timezone_get())
     ];
 });
 
 $factory->define(App\Record::class, function (Faker\Generator $faker) {
     return [
-        'reference' => $faker->numerify('BT##/##'),
-        'title' => 'Companies dissolved in 1924-1963: Nos 13043-20971 (incorporated 1879-1885)',
-        'description' => 'Companies dissolved in 1924-1963: Nos 13043-20971 (incorporated 1879-1885)',
-        'covering_date' => '1879 May 09 - 1963 Dec 31',
+        'reference' => 'REC.REF',
+        'title' => 'Example record title',
+        'description' => 'Example record descrription',
+        'covering_date' => 'Example record covering date',
         'document_is_open' => true,
         'description_is_open' => true,
-        'closure_status_description' => 'Open Document',
-        'legal_status' => 'Public record'
+        'closure_status_description' => 'Example closure status description',
+        'legal_status' => 'Example legal status'
     ];
 });

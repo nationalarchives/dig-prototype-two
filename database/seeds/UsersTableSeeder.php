@@ -12,15 +12,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Gwyn Jones',
-            'email' => 'gwyn.jones@nationalarchives.gsi.gov.uk',
-            'password' => bcrypt('password'),
-            'department_id' => 1
-        ]);
-
-        DB::table('users')->insert([
-            'name' => 'Punal Chotrani',
-            'email' => 'punal.chotrani@nationalarchives.gsi.gov.uk',
+            'name' => 'Example user',
+            'email' => 'example@example.gov',
             'password' => bcrypt('password'),
             'department_id' => 1
         ]);
