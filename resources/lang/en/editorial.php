@@ -36,8 +36,20 @@ return [
         'description' => 'Description',
         'parent_collection' => 'Parent collection',
         'transferring_department' => 'Transferring department',
+        'create_batch' => 'Add a new batch to :series',
         'batches' => [
             'heading' => 'Batches within series :series'
+        ]
+    ],
+    'batches' => [
+        'create' => [
+            'title' => 'Create batch',
+            'name' => 'Batch name',
+            'type' => 'Batch type',
+            'submit_button' => 'Create batch'
+        ],
+        'store' => [
+            'success_message' => 'Batch :name created successfully'
         ]
     ],
     'records' => [

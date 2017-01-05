@@ -1,7 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('page_specific_breadcrumbs')
-    <li><a href="{{ route('collections.show', ['id' => $series->collection->id] )}}">{{ $series->collection->reference }}</a></li>
+    <li>
+        <a href="{{ route('collections.show', ['id' => $series->collection->id] )}}">{{ $series->collection->reference }}</a>
+    </li>
     <li class="active">{{ $series->reference }}</li>
 @endsection
 
@@ -42,6 +44,10 @@
                     </li>
                 @endforeach
             </ul>
+
+            <a href="{{ route('batches.create', ['series' => $series->id]) }}"
+               class="btn btn-default">{{ trans('editorial.series.create_batch', ['series' => $series->reference]) }}</a>
+
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ trans('editorial.series.summary_heading', ['series' => $series->reference ]) }}</h3>
