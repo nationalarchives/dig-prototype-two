@@ -8044,6 +8044,14 @@ a:hover .panel-body {
   border: 0;
 }
 
+.progress-status {
+  margin-bottom: 20px;
+}
+
+.progress-status .glyphicon-ok {
+  color: #3c763d;
+}
+
 .authentication {
   padding-top: 4em;
 }
