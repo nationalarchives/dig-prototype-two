@@ -31,6 +31,8 @@ Route::get('batch/{batch}', 'BatchesController@show')->name('batches.show');
 
 Route::post('batches/store', 'BatchesController@store')->name('batches.store');
 
+Route::patch('batches/update', 'BatchesController@update')->name('batches.update');
+
 Route::get('record/{record}', 'RecordsController@show');
 
 Auth::routes();
