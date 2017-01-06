@@ -13,6 +13,7 @@
                 @include('partials.breadcrumbs')
                 @include('partials.errors')
                 @include('partials.flash-messages')
+                @include('partials.progress-bar')
                 @yield('content')
             </div>
         </main>
