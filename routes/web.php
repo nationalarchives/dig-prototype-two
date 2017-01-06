@@ -25,7 +25,11 @@ Route::get('collections/{collection}', 'CollectionsController@show')->name('coll
 
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
 
+Route::get('batch/create/{series}', 'BatchesController@create')->name('batches.create');
+
 Route::get('batch/{batch}', 'BatchesController@show')->name('batches.show');
+
+Route::post('batches/store', 'BatchesController@store')->name('batches.store');
 
 Route::get('record/{record}', 'RecordsController@show');
 
