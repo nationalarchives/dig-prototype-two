@@ -11,7 +11,12 @@ return [
     | stored in the database or application configuration
     |
     */
-
+    'progress_bar' => [
+        'metadata_uploaded' => 'Metadata CSV uploaded',
+        'metadata_validated' => 'Metadata validated',
+        'transfer_initiated' => 'Transfer initiated',
+        'transferred' => 'Batch transferred'
+    ],
     'collections' => [
         'heading' => ':name collections',
         'description' => ' The :collection_number registered collections for :name are shown below',
@@ -79,10 +84,10 @@ return [
     'navigation' => [
         'heading' => 'Dashboard',
         'links' => [
-        	[
-		        'route' => 'collections.index',
-		        'text' => 'My collections'
-	        ]
+            [
+                'route' => 'collections.index',
+                'text' => 'My collections'
+            ]
         ]
     ],
     'messages' => [

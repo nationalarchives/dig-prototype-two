@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+    @include('partials.progress-bar')
     <h1 class="page-header">{{ $batch->name }}</h1>
     <div class="row">
         <div class="col-md-6">
