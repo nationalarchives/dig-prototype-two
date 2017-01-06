@@ -9,10 +9,16 @@ class BatchesTableSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
         foreach (\App\Series::all() as $series) {
-            $batch = factory(App\Batch::class, rand(1, 5))->create(['series_id' => $series->id]);
+            $batch = factory(App\Batch::class, rand(1, 2))->create([
+                'series_id' => $series->id,
+                'name' => $series->reference . 'Y17B001',
+                'path_to_schema_file' => $series->reference . 'Y17B001' . '.csvs',
+                'path_to_metadata_file' => $series->reference . 'Y17B001' . '.csv',
+            ]);
         }
     }
 }

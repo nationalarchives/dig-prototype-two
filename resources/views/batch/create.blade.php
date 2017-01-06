@@ -7,7 +7,7 @@
 
 @section('content')
     <h1>{{ trans('editorial.batches.create.title') }}</h1>
-    <form action="{{ route('batches.store') }}" method="post">
+    <form action="{{ route('batches.store') }}" method="post" enctype="multipart/form-data">
 
         {{ csrf_field() }}
 

@@ -45,8 +45,16 @@
                 @endforeach
             </ul>
 
-            <a href="{{ route('batches.create', ['series' => $series->id]) }}"
-               class="btn btn-default">{{ trans('editorial.series.create_batch', ['series' => $series->reference]) }}</a>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ trans('editorial.series.create_batch', ['series' => $series->reference]) }}</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{{ route('batches.create', ['series' => $series->id]) }}"
+                       class="btn btn-default">{{ trans('editorial.series.create_batch', ['series' => $series->reference]) }}</a>
+                </div>
+            </div>
+
 
             <div class="panel panel-default">
                 <div class="panel-heading">

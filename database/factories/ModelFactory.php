@@ -23,35 +23,54 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Collection::class, function (Faker\Generator $faker) {
+    return [
+        'reference' => strtoupper($faker->randomLetter . $faker->randomLetter) . $faker->randomNumber(3),
+        'name' => 'A collection related to the Leveson Inquiry',
+        'department_id' => 1
+    ];
+});
+
 $factory->define(App\Series::class, function (Faker\Generator $faker) {
     return [
-        'reference' => 'SER.REF',
-        'name' => 'Example series name',
-        'description' => 'Example series description',
-        'transfer_status' => 'Example transfer status',
-        'type' => 'Example transfer type',
+        'reference' => 'LEV3',
+        'name' => 'Inquiry into the Culture, Practices and Ethics of the Press (The Leveson Inquiry): Judicial Reviews and Administrative Records',
+        'description' => '	
+This series consists of records relating to the administrative running of the Leveson Inquiry. Included are judicial reviews made during the Inquiry, logs of correspondence and policy on email management.',
+        'transfer_status' => $faker->randomElement(['Metadata CSV uploaded', 'Metadata CSV validated', 'Transfer in progress', 'Transferred']),
+        'type' => $faker->randomElement(['Born Digital', 'Digitised']),
         'collection_id' => '1'
     ];
 });
 
 $factory->define(App\Batch::class, function (Faker\Generator $faker) {
     return [
-        'name' => 'Example batch name',
+        'name' => 'XXY17B001',
         'series_id' => '1',
-        'type' => 'Example batch type',
-        'received' => $faker->dateTimeBetween($statDate = '-1 years', $endDate = 'now', $timezone = date_default_timezone_get())
+        'type' => $faker->randomElement(['Born Digital', 'Digitised']),
+        'received' => $faker->dateTimeBetween($statDate = '-1 years', $endDate = 'now', $timezone = date_default_timezone_get()),
+        'path_to_schema_file' => 'XXY17B001' . '.csvs',
+        'path_to_metadata_file' => 'XXY17B001' . '.csv'
+
     ];
 });
 
+// Make same as LEV 3/2/Z
+
 $factory->define(App\Record::class, function (Faker\Generator $faker) {
     return [
-        'reference' => 'REC.REF',
-        'title' => 'Example record title',
-        'description' => 'Example record descrription',
-        'covering_date' => 'Example record covering date',
-        'document_is_open' => true,
-        'description_is_open' => true,
-        'closure_status_description' => 'Example closure status description',
-        'legal_status' => 'Example legal status'
+        'reference' => 'LEV3/2/Z ',
+        'title' => $faker->shuffle('aeioutrzeqwepyl') . '.' . $faker->randomElement(['xls', 'xml', 'doc', 'docx', 'xls', 'png', 'mp4']),
+        'note' => '	The record opening date is calculated from 8 March 2012 which is the closure start date as recorded on the schedule approved by the Advisory Council on National Records and Archives in February 2014.',
+        'covering_date' => '2011 Nov 09',
+        'arrangement' => '	This born digital record was arranged under the following file structure: LEV 3 >> Judicial reviews',
+        'document_is_open' => false,
+        'description_is_open' => false,
+        'closure_status_description' => 'Closed or retained document, Closed description',
+        'legal_status' => 'Public record',
+        'physical_description' => '1 digital record',
+        'access_conditions' => 'Closed for 60 years',
+        'foi_decision_date' => '2014',
+        'exemption' => 'Personal information where the applicant is a 3rd party'
     ];
 });

@@ -1,13 +1,36 @@
 @extends('layouts.dashboard')
 
 @section('page_specific_breadcrumbs')
-    <li><a href="{{ route('collections.show', ['id' => $batch->series->collection->id] )}}">{{ $batch->series->collection->reference }}</a></li>
+    <li>
+        <a href="{{ route('collections.show', ['id' => $batch->series->collection->id] )}}">{{ $batch->series->collection->reference }}</a>
+    </li>
     <li><a href="{{ route('series.show', ['id' => $batch->series->id] )}}">{{ $batch->series->reference }}</a></li>
     <li class="active">{{ $batch->name }}</li>
 @endsection
 
 @section('content')
     <h1 class="page-header">{{ $batch->name }}</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{ trans('editorial.batches.show.schema_heading', ['batch' => $batch->name]) }}</div>
+                <div class="panel-body"><a
+                            href="{{ $batch->path_to_schema_file }}">{{ $batch->path_to_schema_file }}</a></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{ trans('editorial.batches.show.metadata_heading', ['batch' => $batch->name]) }}</div>
+                <div class="panel-body"><a
+                            href="{{ $batch->path_to_metadata_file }}">{{ $batch->path_to_metadata_file }}</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="sub-header">{{ trans('editorial.batches.show.records_heading', ['batch' => $batch->name]) }}</h2>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-3">
             <div class="panel panel-default">
