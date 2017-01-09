@@ -50,7 +50,14 @@ return [
         'show' => [
             'records_heading' => 'Records relating to :batch',
             'schema_heading' => 'Schema for :batch',
-            'metadata_heading' => 'Uploaded metadata for :batch'
+            'metadata_uploaded' => 'Uploaded metadata for :batch',
+            'metadata_upload' => 'Upload metadata for :batch',
+        ],
+        'upload' => [
+            'label' => 'Upload metadata'
+        ],
+        'upload_metadata' => [
+            'success_message' => 'Successfully uploaded metadata for :batch'
         ],
         'create' => [
             'title' => 'Create batch',
