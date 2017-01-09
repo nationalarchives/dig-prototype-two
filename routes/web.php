@@ -35,4 +35,8 @@ Route::patch('batches/update', 'BatchesController@update')->name('batches.update
 
 Route::get('record/{record}', 'RecordsController@show');
 
+// Static pages
+
+Route::get('metadata_uploaded/{batch}', 'StaticPagesController@metadata_uploaded')->name('static.metadata_uploaded');
+
 Auth::routes();

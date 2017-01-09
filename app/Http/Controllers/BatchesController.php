@@ -47,6 +47,6 @@ class BatchesController extends Controller
 
         flash(trans('editorial.batches.upload_metadata.success_message', ['batch' => $batch->name]), 'success');
 
-        return back();
+        return redirect()->route('static.metadata_uploaded', ['batch' => $batch]);
     }
 }
