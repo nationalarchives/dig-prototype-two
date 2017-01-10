@@ -10,7 +10,7 @@
             <li><a href="{{ route($link['route']) }}">{{ $link['text'] }}</a></li>
         @endforeach
     </ul>
-    @include('partials.guidance')
+    @include('partials.guidance-links')
     <h3>{{ trans('editorial.messages.heading') }}</h3>
     <ul class="nav nav-sidebar">
         <li><a href="">Message centre</a></li>
