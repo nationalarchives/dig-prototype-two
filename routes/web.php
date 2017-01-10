@@ -43,4 +43,6 @@ Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->
 
 Route::get('begin_transfer/{batch}', 'StaticPagesController@begin_transfer')->name('static.begin_transfer');
 
+Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
+
 Auth::routes();

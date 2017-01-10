@@ -6,13 +6,13 @@
             <ul>
                 <li><h4>Step 1: Appraising your records</h4>
                     <ul>
-                        <li><a href="#">Schedules for keeping and disposing</a></li>
+                        <li><a href="/guidance">Schedules for keeping and disposing</a></li>
                     </ul>
                 </li>
                 <li><h4>Step 2: Selecting your records</h4>
                     <ul>
-                        <li><a href="#">Operational selection policies by <strong>subject</strong></a></li>
-                        <li><a href="#">Operational selection policies by <strong>number</strong></a></li>
+                        <li><a href="/guidance">Operational selection policies by <strong>subject</strong></a></li>
+                        <li><a href="/guidance">Operational selection policies by <strong>number</strong></a></li>
                     </ul>
                 </li>
             </ul>

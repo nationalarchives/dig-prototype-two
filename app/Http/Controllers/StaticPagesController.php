@@ -24,4 +24,8 @@ class StaticPagesController extends Controller
     {
         return view('static_pages.begin_transfer', compact('batch'));
     }
+
+	public function guidance() {
+		return view('static_pages.guidance');
+    }
 }
