@@ -15,4 +15,11 @@ class Series extends Model
     {
         return $this->hasMany(Batch::class);
     }
+
+    public function hasBatchesWithMetadata()
+    {
+        $batchesWithMetadata = $this->batches()->where('path_to_metadata_file', '!=', '0')->count();
+
+        return $batchesWithMetadata > 0;
+    }
 }

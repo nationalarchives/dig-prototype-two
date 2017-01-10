@@ -17,4 +17,9 @@ class Batch extends Model
     {
         return $this->hasMany(Record::class);
     }
+
+    public function metadataHasBeenUploaded()
+    {
+        return $this->path_to_metadata_file;
+    }
 }

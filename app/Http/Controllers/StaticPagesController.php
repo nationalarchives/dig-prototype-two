@@ -13,4 +13,10 @@ class StaticPagesController extends Controller
 
         return view('static_pages.metadata_uploaded', compact('batch'));
     }
+
+    public function metadata_review(Batch $batch)
+    {
+        return view('static_pages.metadata_review', compact('batch'));
+
+    }
 }

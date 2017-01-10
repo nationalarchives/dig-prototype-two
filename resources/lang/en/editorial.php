@@ -35,7 +35,7 @@ return [
     'series' => [
         'type' => 'Series type: :type',
         'preamble' => 'This page provides an opportunity to view a summary of the uploaded metadata for the complete series and view transfer batches that have been added to the series so far.',
-        'summary_heading' => 'Summary of uploaded metadata for :series',
+        'summary_heading' => 'Summary of uploaded metadata',
         'name' => 'Name',
         'reference' => 'Reference',
         'description' => 'Description',
@@ -104,6 +104,12 @@ return [
     'guidance' => [
         'heading' => 'Guidance',
         'toggle_text' => 'Browse guidance'
+    ],
+    'static_pages' => [
+        'metadata_upload' => [
+            'heading' => 'Review uploaded metadata for :batch',
+            'introductory_text' => 'This page provides an opportunity to view the uploaded metadata and compare it to that provided in the DROID report'
+        ]
     ]
 
 ];

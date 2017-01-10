@@ -55,41 +55,12 @@
                 </div>
             </div>
 
+            @include('partials.pie-chart')
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{ trans('editorial.series.summary_heading', ['series' => $series->reference ]) }}</h3>
-                </div>
-                <div class="panel-body">
-                    <div id="piechart"></div>
-                </div>
-            </div>
         </div>
     </div>
 
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages': ['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Uploaded records'],
-                ['Open records', 824],
-                ['Closed records with closed description', 310],
-                ['Closed records with open description', 105]
-            ]);
-
-            var options = {
-                title: 'Records described in CSV metadata'
-            };
-
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-            chart.draw(data, options);
-        }
-    </script>
 @endsection
