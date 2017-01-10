@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    @include('partials.progress-bar')
+    @include('partials.progress-bar', ['batch' => $batch])
     <h1 class="page-header">{{ $batch->name }}</h1>
     @if($batch->metadataHasBeenUploaded())
         @include('partials.begin-transfer')
