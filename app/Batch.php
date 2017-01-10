@@ -22,4 +22,9 @@ class Batch extends Model
     {
         return $this->path_to_metadata_file;
     }
+
+    public function metadataStatus()
+    {
+        return $this->metadataHasBeenUploaded() ? 'Metadata uploaded' : 'Metadata required';
+    }
 }
