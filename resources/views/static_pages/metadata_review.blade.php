@@ -16,6 +16,7 @@
     @include('partials.comparison-table')
 
     @include('partials.pie-chart', ['series' => $batch->series])
+    <a href="" class="btn btn-danger">Delete and resubmit this metadata</a>
 
 @endsection
 

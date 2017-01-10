@@ -29,7 +29,7 @@
     </div>
     @if($batch->metadataHasBeenUploaded())
         @include('partials.records-within-batch', ['batch' => $batch])
-    @endif;
+    @endif
 @endsection
 
 
