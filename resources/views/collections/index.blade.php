@@ -14,14 +14,21 @@
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <div class="caption">
+                        @if ($collection->series->count() >= 1)
+                            <div class="pull-right">
+                                <span class="label label-info">
+                                    Transfer in progress
+                                </span>
+                            </div>
+                        @endif
                         <h3>{{ $collection->reference }}</h3>
                         <p>{{ $collection->name }}</p>
-
                         <p>
                             <a href="{{ route('collections.show', ['id' => $collection->id]) }}"
                                class="btn btn-default btn-sm" role="button">View {{ $collection->series->count() }}
-                                series <span
-                                        class="glyphicon glyphicon-chevron-right"></span></a></p>
+                                series <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>

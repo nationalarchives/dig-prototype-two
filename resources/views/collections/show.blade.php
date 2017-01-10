@@ -11,7 +11,7 @@
                 <div class="panel panel-default individual-series">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ $series->reference }}: {{ $series->name }}</h3>
-                        <span class="label label-default">{{ $series->transfer_status }}</span>
+                        <span class="label label-info">{{ $series->transfer_status }}</span>
                     </div>
                     <div class="panel-body">
                         <div class="col-md-1">
