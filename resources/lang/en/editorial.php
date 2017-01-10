@@ -52,6 +52,7 @@ return [
             'schema_heading' => 'Schema for :batch',
             'metadata_uploaded' => 'Uploaded metadata for :batch',
             'metadata_upload' => 'Upload metadata for :batch',
+            'proceed_to_transfer' => 'View recommended transfer options for :batch'
         ],
         'upload' => [
             'label' => 'Upload metadata'

@@ -11,12 +11,16 @@
 @section('content')
     @include('partials.progress-bar')
     <h1 class="page-header">{{ $batch->name }}</h1>
+    @if($batch->metadataHasBeenUploaded())
+        @include('partials.begin-transfer')
+    @endif
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('editorial.batches.show.schema_heading', ['batch' => $batch->name]) }}</div>
-                <div class="panel-body"><a
-                            href="{{ $batch->path_to_schema_file }}">{{ $batch->path_to_schema_file }}</a></div>
+                <div class="panel-body">
+                    <a href="{{ $batch->path_to_schema_file }}">{{ $batch->path_to_schema_file }}</a>
+                </div>
             </div>
         </div>
         <div class="col-md-6">
