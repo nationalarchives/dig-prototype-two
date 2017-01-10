@@ -18,3 +18,10 @@ function progressBarItem($text, App\Batch $batch)
 
     return sprintf($template, $button_class, $text, $progress_glyphicon);
 }
+
+function showBatchCount(App\Series $series)
+{
+    $template = '<span class="label label-default">%s %s</span>';
+    $count_indicator = sprintf($template, $series->numberOfBatches(), str_plural('batch', $series->numberOfBatches()));
+    return $count_indicator;
+}

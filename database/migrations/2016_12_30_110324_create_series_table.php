@@ -19,7 +19,6 @@ class CreateSeriesTable extends Migration
             $table->string('reference');
             $table->string('name');
             $table->string('description');
-            $table->string('transfer_status');
             $table->string('type');
             $table->integer('collection_id')->unsigned()->index();
         });

@@ -37,8 +37,7 @@ $factory->define(App\Series::class, function (Faker\Generator $faker) {
         'name' => 'Inquiry into the Culture, Practices and Ethics of the Press (The Leveson Inquiry): Judicial Reviews and Administrative Records',
         'description' => '	
 This series consists of records relating to the administrative running of the Leveson Inquiry. Included are judicial reviews made during the Inquiry, logs of correspondence and policy on email management.',
-        'transfer_status' => $faker->randomElement(['Metadata CSV uploaded', 'Metadata CSV validated', 'Transfer in progress', 'Transferred']),
-        'type' => $faker->randomElement(['Born Digital', 'Digitised']),
+        'type' => 'Born Digital',
         'collection_id' => '1'
     ];
 });

@@ -22,4 +22,10 @@ class Series extends Model
 
         return $batchesWithMetadata > 0;
     }
+
+    public function numberOfBatches()
+    {
+        return $this->batches()->count();
+    }
+
 }
