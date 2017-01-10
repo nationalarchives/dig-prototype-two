@@ -41,4 +41,6 @@ Route::get('metadata_uploaded/{batch}', 'StaticPagesController@metadata_uploaded
 
 Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->name('static.metadata_review');
 
+Route::get('begin_transfer/{batch}', 'StaticPagesController@begin_transfer')->name('static.begin_transfer');
+
 Auth::routes();

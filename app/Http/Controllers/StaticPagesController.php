@@ -19,4 +19,9 @@ class StaticPagesController extends Controller
         return view('static_pages.metadata_review', compact('batch'));
 
     }
+
+    public function begin_transfer(Batch $batch)
+    {
+        return view('static_pages.begin_transfer', compact('batch'));
+    }
 }

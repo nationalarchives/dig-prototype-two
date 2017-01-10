@@ -52,7 +52,8 @@ return [
             'schema_heading' => 'Schema for :batch',
             'metadata_uploaded' => 'Uploaded metadata for :batch',
             'metadata_upload' => 'Upload metadata for :batch',
-            'proceed_to_transfer' => 'View recommended transfer options for :batch'
+            'proceed_to_transfer' => 'View recommended transfer options for :batch',
+            'begin_transfer' => 'Begin transfer of :batch'
         ],
         'upload' => [
             'label' => 'Upload metadata'
@@ -110,6 +111,9 @@ return [
         'metadata_upload' => [
             'heading' => 'Review uploaded metadata for :batch',
             'introductory_text' => 'This page provides an opportunity to view the uploaded metadata and compare it to that provided in the DROID report'
+        ],
+        'begin_transfer' => [
+            'heading' => 'Digital transfer'
         ]
     ]
 
