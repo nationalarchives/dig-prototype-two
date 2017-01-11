@@ -50,7 +50,7 @@ return [
         'show' => [
             'records_heading' => 'Records relating to :batch',
             'schema_heading' => 'Schema for :batch',
-            'metadata_uploaded' => 'Uploaded metadata for :batch',
+            'metadata_uploaded' => 'Summary of metadata for :batch',
             'metadata_upload' => 'Upload metadata for :batch',
             'proceed_to_transfer' => 'View recommended transfer options for :batch',
             'begin_transfer' => 'Begin transfer of :batch'
@@ -96,6 +96,14 @@ return [
             [
                 'route' => 'collections.index',
                 'text' => 'My collections'
+            ],
+            [
+                'route' => 'collections.index',
+                'text' => 'My series'
+            ],
+            [
+                'route' => 'collections.index',
+                'text' => 'My batches'
             ]
         ]
     ],
@@ -109,7 +117,7 @@ return [
     ],
     'static_pages' => [
         'metadata_upload' => [
-            'heading' => 'Review uploaded metadata for :batch',
+            'heading' => 'Review summary of metadata for :batch',
             'introductory_text' => 'This page provides an opportunity to view the uploaded metadata and compare it to that provided in the DROID report'
         ],
         'begin_transfer' => [
