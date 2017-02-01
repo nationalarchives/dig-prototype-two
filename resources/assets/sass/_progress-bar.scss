@@ -1,4 +1,13 @@
 .progress-status {
+  button:hover {
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  .success:hover {
+    cursor: default;
+    background-color: #eeffe7;
+  }
   margin-bottom: 20px;
   .glyphicon-ok {
     color: #3c763d;

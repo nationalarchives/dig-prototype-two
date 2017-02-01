@@ -8048,6 +8048,17 @@ a:hover .panel-body {
   margin-bottom: 20px;
 }
 
+.progress-status button:hover {
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.progress-status .success:hover {
+  cursor: default;
+  background-color: #eeffe7;
+}
+
 .progress-status .glyphicon-ok {
   color: #3c763d;
 }
