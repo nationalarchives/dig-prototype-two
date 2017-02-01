@@ -12,8 +12,7 @@ return [
     |
     */
     'progress_bar' => [
-        'metadata_uploaded' => 'Metadata CSV uploaded',
-        'metadata_validated' => 'Metadata validated',
+        'metadata_validated' => 'Metadata CSV validated',
         'transfer_initiated' => 'Transfer initiated',
         'transferred' => 'Batch transferred'
     ],
@@ -69,6 +68,10 @@ return [
         ],
         'store' => [
             'success_message' => 'Batch :name created successfully'
+        ],
+        'statuses' => [
+            'metadata_required' => 'Metadata required',
+            'metadata_validated' => 'Metadata CSV validated'
         ]
     ],
     'records' => [

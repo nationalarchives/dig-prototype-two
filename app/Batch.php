@@ -25,6 +25,6 @@ class Batch extends Model
 
     public function metadataStatus()
     {
-        return $this->metadataHasBeenUploaded() ? 'Metadata uploaded' : 'Metadata required';
+        return $this->metadataHasBeenUploaded() ? trans('editorial.batches.statuses.metadata_validated') : trans('editorial.batches.statuses.metadata_required');
     }
 }
