@@ -22,10 +22,6 @@
     <table class="table">
         <tbody>
         <tr>
-            <th>{{ trans('editorial.records.reference') }}</th>
-            <td>{{ $record->reference }}</td>
-        </tr>
-        <tr>
             <th>{{ trans('editorial.records.title') }}</th>
             <td>{{ $record->title }}</td>
         </tr>

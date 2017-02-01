@@ -58,7 +58,6 @@ $factory->define(App\Batch::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Record::class, function (Faker\Generator $faker) {
     return [
-        'reference' => 'LEV3/2/Z ',
         'title' => $faker->shuffle('aeioutrzeqwepyl') . '.' . $faker->randomElement(['xls', 'xml', 'doc', 'docx', 'xls', 'png', 'mp4']),
         'note' => '	The record opening date is calculated from 8 March 2012 which is the closure start date as recorded on the schedule approved by the Advisory Council on National Records and Archives in February 2014.',
         'covering_date' => '2011 Nov 09',

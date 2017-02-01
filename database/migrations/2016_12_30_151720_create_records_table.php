@@ -17,7 +17,6 @@ class CreateRecordsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('batch_id')->unsigned()->index();
-            $table->string('reference');
             $table->string('title');
             $table->string('note');
             $table->string('covering_date');

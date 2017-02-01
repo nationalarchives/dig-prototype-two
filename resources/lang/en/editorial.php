@@ -72,7 +72,6 @@ return [
         ]
     ],
     'records' => [
-        'reference' => 'Reference',
         'title' => 'Title',
         'description' => 'Description',
         'held_by' => 'Held by',
