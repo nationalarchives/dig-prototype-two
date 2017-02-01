@@ -55,8 +55,6 @@
                 </div>
             </div>
 
-            @include('partials.pie-chart')
-
         </div>
     </div>
 
