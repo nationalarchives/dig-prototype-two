@@ -13,7 +13,7 @@ class SeriesTableSeeder extends Seeder
     public function run()
     {
         foreach (\App\Collection::all() as $collection) {
-            $series = factory(App\Series::class, rand(1, 2))->create(['collection_id' => $collection->id]);
+            $series = factory(App\Series::class)->create(['collection_id' => $collection->id]);
         }
     }
 }
