@@ -11,10 +11,18 @@
 
 @section('content')
     <h1>{{ trans('editorial.static_pages.begin_transfer.heading') }}</h1>
-    <form id="dragDrop" action="upload.php" method="POST">
-        <input type="file" multiple="">
-        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
-        <p>Drag your files here or click in this area.</p>
-        <button type="submit">Upload</button>
+
+    <form action="{{ route('batches.transfer_files') }}" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <input type="hidden" name="id" value="{{ $batch->id }}">
+            <input type="hidden" name="_method" value="PATCH">
+            <label for="reference">{{ trans('editorial.batches.upload.label') }}</label>
+            <input type="file" name="transfer_file">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-default">
+        </div>
     </form>
+
 @endsection

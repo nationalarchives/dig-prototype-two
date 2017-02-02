@@ -48,9 +48,7 @@ $factory->define(App\Batch::class, function (Faker\Generator $faker) {
         'series_id' => '1',
         'type' => $faker->randomElement(['Born Digital', 'Digitised']),
         'received' => $faker->dateTimeBetween($statDate = '-1 years', $endDate = 'now', $timezone = date_default_timezone_get()),
-        'path_to_schema_file' => 'XXY17B000' . '.csvs',
-        'path_to_metadata_file' => 'XXY17B001' . '.csv'
-
+        'path_to_schema_file' => 'XXY17B000' . '.csvs'
     ];
 });
 

@@ -11,6 +11,10 @@ return [
     | stored in the database or application configuration
     |
     */
+	'introduction' => [
+		'title' => 'Digital Interface for Government',
+		'description' => 'This is a prototype of a standardised access point to the Digital Records Infrastructure (DRI). It covers the validation and upload of born digital records only (commonly referred to as \'Gateway 3\').',
+	],
     'progress_bar' => [
         'metadata_validated' => 'Metadata CSV validated',
         'transfer_initiated' => 'Transfer initiated',
@@ -58,7 +62,8 @@ return [
             'label' => 'Upload metadata'
         ],
         'upload_metadata' => [
-            'success_message' => 'Successfully uploaded metadata for :batch'
+            'success_message' => 'Successfully uploaded metadata for :batch',
+            'failure_message' => 'Please select a metadata file for :batch'
         ],
         'create' => [
             'title' => 'Create batch',
@@ -71,7 +76,12 @@ return [
         ],
         'statuses' => [
             'metadata_required' => 'Metadata required',
-            'metadata_validated' => 'Metadata CSV validated'
+            'metadata_validated' => 'Metadata CSV validated',
+            'files_transferred' => 'Files transferred'
+        ],
+        'transfer_statuses' => [
+            'failure_message' => 'Please select file for :batch',
+            'success_message' => 'Successfully uploaded files for :batch'
         ]
     ],
     'records' => [
@@ -126,5 +136,4 @@ return [
             'heading' => 'Digital transfer'
         ]
     ]
-
 ];

@@ -4,7 +4,7 @@
             <div class="panel-heading">Begin transfer</div>
             <div class="panel-body">
                 <p>We recommend this transfer is provided by upload </p>
-                <p><a href="{{ route('static.begin_transfer', ['batch' => $batch]) }}" class="btn btn-primary">Begin transfer</a></p>
+                <p><a href="{{ route('batches.begin_transfer', ['batch' => $batch]) }}" class="btn btn-primary">Begin transfer</a></p>
                 <h3>Prefer physical HDD?</h3>
                 <p>Alternatively, let us know if you would prefer to provide the transfer by physical <a href="#"
                                                                                                          id="show-hdd-transfer">Hard

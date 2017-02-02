@@ -6,10 +6,10 @@ function flash($message, $level = 'info')
     session()->flash('flash_message_level', $level);
 }
 
-function progressBarItem($text, App\Batch $batch)
+function progressBarItem($text, App\Batch $batch, $stateToTest)
 {
-    $button_class = ($batch->metadataHasBeenUploaded()) ? 'success' : 'default';
-    $progress_glyphicon = ($batch->metadataHasBeenUploaded()) ? '<span class="glyphicon glyphicon-ok pull-right" aria-hidden="true"></span>' : '';
+    $button_class = ($stateToTest) ? 'success' : 'default';
+    $progress_glyphicon = ($stateToTest) ? '<span class="glyphicon glyphicon-ok pull-right" aria-hidden="true"></span>' : '';
     $template = '<div class="btn-group" role="group">
         <button type="button"
                 class="btn btn-default %s">%s 

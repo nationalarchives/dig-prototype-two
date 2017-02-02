@@ -35,9 +35,15 @@ class BatchesController extends Controller
 
     }
 
-    public function update(Request $request)
+    public function upload_metadata(Request $request)
     {
         $batch = Batch::find($request->id);
+
+        // Redirect if file not present in request
+        if ($request->file('metadata_file') === NULL) {
+            flash(trans('editorial.batches.upload_metadata.failure_message', ['batch' => $batch->name]), 'danger');
+            return redirect()->route('batches.show', ['batch' => $batch]);
+        }
 
         $path_to_stored_file = $request->file('metadata_file')->store('metadata_files');
 
@@ -48,5 +54,32 @@ class BatchesController extends Controller
         flash(trans('editorial.batches.upload_metadata.success_message', ['batch' => $batch->name]), 'success');
 
         return redirect()->route('static.metadata_uploaded', ['batch' => $batch]);
+
+    }
+
+    public function begin_transfer(Batch $batch)
+    {
+        return view('batch.begin_transfer', compact('batch'));
+    }
+
+    public function transfer_files(Request $request)
+    {
+        $batch = Batch::find($request->id);
+
+        // Redirect if file not present in request
+        if ($request->file('transfer_file') === NULL) {
+            flash(trans('editorial.batches.transfer_statuses.failure_message', ['batch' => $batch->name]), 'danger');
+            return view('batch.begin_transfer', compact('batch'));
+        }
+
+        $path_to_transfer_file = $request->file('transfer_file')->store('transfer_files');
+
+        $batch->path_to_transfer_file = $path_to_transfer_file;
+
+        $batch->save();
+
+        flash(trans('editorial.batches.transfer_statuses.success_message', ['batch' => $batch->name]), 'success');
+        return view('batch.show', compact('batch'));
+
     }
 }

@@ -31,7 +31,11 @@ Route::get('batch/{batch}', 'BatchesController@show')->name('batches.show');
 
 Route::post('batches/store', 'BatchesController@store')->name('batches.store');
 
-Route::patch('batches/update', 'BatchesController@update')->name('batches.update');
+Route::patch('batches/upload_metadata', 'BatchesController@upload_metadata')->name('batches.upload_metadata');
+
+Route::any('batches/transfer_files', 'BatchesController@transfer_files')->name('batches.transfer_files');
+
+Route::get('batches/begin_transfer/{batch}', 'BatchesController@begin_transfer')->name('batches.begin_transfer');
 
 Route::get('record/{record}', 'RecordsController@show');
 
@@ -41,8 +45,9 @@ Route::get('metadata_uploaded/{batch}', 'StaticPagesController@metadata_uploaded
 
 Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->name('static.metadata_review');
 
-Route::get('begin_transfer/{batch}', 'StaticPagesController@begin_transfer')->name('static.begin_transfer');
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
+
+Route::get('introduction', 'StaticPagesController@introduction')->name('static.introduction');
 
 Auth::routes();

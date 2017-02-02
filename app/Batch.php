@@ -23,8 +23,23 @@ class Batch extends Model
         return $this->path_to_metadata_file;
     }
 
-    public function metadataStatus()
+    public function filesTransferred()
     {
-        return $this->metadataHasBeenUploaded() ? trans('editorial.batches.statuses.metadata_validated') : trans('editorial.batches.statuses.metadata_required');
+        return $this->path_to_transfer_file;
+    }
+
+    public function transferStatus()
+    {
+        $status = trans('editorial.batches.statuses.metadata_required');
+
+        if($this->metadataHasBeenUploaded()) {
+            $status = trans('editorial.batches.statuses.metadata_validated');
+        }
+
+        if($this->filesTransferred()) {
+            $status = trans('editorial.batches.statuses.files_transferred');
+        }
+
+        return $status;
     }
 }
