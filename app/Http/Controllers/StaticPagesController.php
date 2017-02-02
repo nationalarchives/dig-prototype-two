@@ -20,11 +20,6 @@ class StaticPagesController extends Controller
 
     }
 
-    public function begin_transfer(Batch $batch)
-    {
-        return view('static_pages.begin_transfer', compact('batch'));
-    }
-
 	public function guidance() {
 		return view('static_pages.guidance');
     }

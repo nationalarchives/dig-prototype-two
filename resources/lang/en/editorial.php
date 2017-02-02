@@ -62,7 +62,8 @@ return [
             'label' => 'Upload metadata'
         ],
         'upload_metadata' => [
-            'success_message' => 'Successfully uploaded metadata for :batch'
+            'success_message' => 'Successfully uploaded metadata for :batch',
+            'failure_message' => 'Please select a metadata file for :batch'
         ],
         'create' => [
             'title' => 'Create batch',
@@ -75,7 +76,12 @@ return [
         ],
         'statuses' => [
             'metadata_required' => 'Metadata required',
-            'metadata_validated' => 'Metadata CSV validated'
+            'metadata_validated' => 'Metadata CSV validated',
+            'files_transferred' => 'Files transferred'
+        ],
+        'transfer_statuses' => [
+            'failure_message' => 'Please select file for :batch',
+            'success_message' => 'Successfully uploaded files for :batch'
         ]
     ],
     'records' => [
@@ -130,5 +136,4 @@ return [
             'heading' => 'Digital transfer'
         ]
     ]
-
 ];

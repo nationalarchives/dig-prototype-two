@@ -19,6 +19,7 @@ class CreateBatchesTable extends Migration
             $table->date('received')->nullable();
             $table->string('path_to_schema_file')->nullable();
             $table->string('path_to_metadata_file')->nullable();
+            $table->string('path_to_transfer_file')->nullable();
             $table->string('name');
             $table->string('series_id');
             $table->string('type');

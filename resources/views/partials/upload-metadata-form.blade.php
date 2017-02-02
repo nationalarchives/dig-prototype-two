@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">{{ trans('editorial.batches.show.metadata_upload', ['batch' => $batch->name]) }}</div>
     <div class="panel-body">
-        <form action="{{ route('batches.update') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('batches.upload_metadata') }}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
                 <input type="hidden" name="id" value="{{ $batch->id }}">
