@@ -45,4 +45,6 @@ Route::get('begin_transfer/{batch}', 'StaticPagesController@begin_transfer')->na
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
 
+Route::get('introduction', 'StaticPagesController@introduction')->name('static.introduction');
+
 Auth::routes();

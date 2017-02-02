@@ -11,6 +11,10 @@ return [
     | stored in the database or application configuration
     |
     */
+	'introduction' => [
+		'title' => 'Digital Interface for Government',
+		'description' => 'This is a prototype of a standardised access point to the Digital Records Infrastructure (DRI). It covers the validation and upload of born digital records only (commonly referred to as \'Gateway 3\').',
+	],
     'progress_bar' => [
         'metadata_validated' => 'Metadata CSV validated',
         'transfer_initiated' => 'Transfer initiated',

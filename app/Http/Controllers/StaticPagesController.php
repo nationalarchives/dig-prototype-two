@@ -28,4 +28,8 @@ class StaticPagesController extends Controller
 	public function guidance() {
 		return view('static_pages.guidance');
     }
+
+	public function introduction() {
+		return view('static_pages.introduction');
+	}
 }
