@@ -37,6 +37,9 @@ return [
     ],
     'series' => [
         'type' => 'Series type: :type',
+        'heading' => ':name series',
+        'count_series' => ' Found :series_number series for :name which is listed below.',
+        'breadcrumb_active' => 'Series',
         'preamble' => 'This page provides an opportunity to view a summary of the uploaded metadata for the complete series and view transfer batches that have been added to the series so far.',
         'summary_heading' => 'Summary of uploaded metadata',
         'name' => 'Name',
@@ -50,6 +53,9 @@ return [
         ]
     ],
     'batches' => [
+	    'breadcrumb_active' => 'Batches',
+	    'heading' => ':name batches',
+	    'count_batches' => ' Found :batches_number batches.',
         'show' => [
             'records_heading' => 'Records relating to :batch',
             'schema_heading' => 'Schema for :batch',
@@ -114,11 +120,11 @@ return [
                 'text' => 'My collections'
             ],
             [
-                'route' => 'collections.index',
+                'route' => 'series.index',
                 'text' => 'My series'
             ],
             [
-                'route' => 'collections.index',
+                'route' => 'batches.index',
                 'text' => 'My batches'
             ]
         ]
