@@ -58,9 +58,14 @@ The individual batch shows:
 * A 'dummy' link to the schema file
 * A form allowing for metadata CSV to be uploaded
 
-## Validation placeholder
+## Validation process (mock)
 
-Having uploaded a metadata CSV file we have a placeholder which represents the three possible states and allow the user to continue to view the success scenario.
+The metadata validation is mocked in the prototype based upon the name of the file that is uploaded. Upon submitting the metadata the user is presented with one of four states:
+
+* An error message if no file was uploaded
+* An error message indicating that the file type/structure is incorrect (if the uploaded file was `scenario_one.csv`)
+* An error message indicating that the file did not validate against the schema (if the uploaded file was `scenario_two.csv`)
+* A confirmation message and summary of the uploaded metadata (if the uploaded file was `metadata.csv`)
 
 ## Individual batch (after metadata is uploaded successfully)
 

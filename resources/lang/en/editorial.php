@@ -63,7 +63,11 @@ return [
         ],
         'upload_metadata' => [
             'success_message' => 'Successfully uploaded metadata for :batch',
-            'failure_message' => 'Please select a metadata file for :batch'
+            'failure_message' => 'Please select a metadata file for :batch',
+            'validation_failed' => [
+                'problem_with_file' => 'The uploaded file is not of the expected type or structure',
+                'does_not_match_schema' => 'The file contents do not match the schema'
+            ]
         ],
         'create' => [
             'title' => 'Create batch',

@@ -45,6 +45,20 @@ class BatchesController extends Controller
             return redirect()->route('batches.show', ['batch' => $batch]);
         }
 
+        // Determine route and message based on uploaded filename
+
+        $filename = $request->file('metadata_file')->getClientOriginalName();
+
+        if ($filename === 'scenario_one.csv') {
+            flash(trans('editorial.batches.upload_metadata.validation_failed.problem_with_file', ['batch' => $batch->name]), 'danger');
+            return back();
+        }
+
+        if ($filename === 'scenario_two.csv') {
+            flash(trans('editorial.batches.upload_metadata.validation_failed.does_not_match_schema', ['batch' => $batch->name]), 'danger');
+            return back();
+        }
+
         $path_to_stored_file = $request->file('metadata_file')->store('metadata_files');
 
         $batch->path_to_metadata_file = $path_to_stored_file;
@@ -53,7 +67,7 @@ class BatchesController extends Controller
 
         flash(trans('editorial.batches.upload_metadata.success_message', ['batch' => $batch->name]), 'success');
 
-        return redirect()->route('static.metadata_uploaded', ['batch' => $batch]);
+        return back();
 
     }
 

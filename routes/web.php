@@ -41,8 +41,6 @@ Route::get('record/{record}', 'RecordsController@show');
 
 // Static pages
 
-Route::get('metadata_uploaded/{batch}', 'StaticPagesController@metadata_uploaded')->name('static.metadata_uploaded');
-
 Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->name('static.metadata_review');
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
