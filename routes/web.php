@@ -23,9 +23,13 @@ Route::post('collections/store', 'CollectionsController@store')->name('collectio
 
 Route::get('collections/{collection}', 'CollectionsController@show')->name('collections.show');
 
+Route::get('series', 'SeriesController@index')->name('series.index');
+
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
 
 Route::get('batches/create/{series}', 'BatchesController@create')->name('batches.create');
+
+Route::get('batches', 'BatchesController@index')->name('batches.index');
 
 Route::get('batches/{batch}', 'BatchesController@show')->name('batches.show');
 

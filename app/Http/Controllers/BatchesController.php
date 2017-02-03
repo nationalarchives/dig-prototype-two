@@ -8,7 +8,12 @@ use App\Series;
 
 class BatchesController extends Controller
 {
-    public function show(Batch $batch)
+	public function index() {
+		$batches = Batch::all();
+		return view('batch.index', compact('batches'));
+	}
+
+	public function show(Batch $batch)
     {
         return view('batch.show', compact('batch'));
     }
