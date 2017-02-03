@@ -11,8 +11,8 @@
 
 @section('content')
     <h1>{{ trans('editorial.static_pages.begin_transfer.heading') }}</h1>
-
-    <form action="{{ route('batches.transfer_files') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('batches.transfer_files', ['id' => $batch->id]) }}" method="post"
+          enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
             <input type="hidden" name="id" value="{{ $batch->id }}">

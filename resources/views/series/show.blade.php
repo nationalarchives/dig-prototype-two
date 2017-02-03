@@ -40,7 +40,8 @@
             <ul class="list-group">
                 @foreach($series->batches as $batch)
                     <li class="list-group-item">
-                        <a href="/batch/{{$batch->id}}">{{ $batch->name }}</a> <span class="label label-{{ ($batch->metadataHasBeenUploaded()) ? 'success' : 'default' }} pull-right">{{ $batch->transferStatus() }}</span>
+                        <a href="{{ route('batches.show', ['id' => $batch->id]) }}">{{ $batch->name }}</a>
+                        <span class="label label-{{ ($batch->metadataHasBeenUploaded()) ? 'success' : 'default' }} pull-right">{{ $batch->transferStatus() }}</span>
                     </li>
                 @endforeach
             </ul>

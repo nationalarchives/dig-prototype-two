@@ -25,17 +25,17 @@ Route::get('collections/{collection}', 'CollectionsController@show')->name('coll
 
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
 
-Route::get('batch/create/{series}', 'BatchesController@create')->name('batches.create');
+Route::get('batches/create/{series}', 'BatchesController@create')->name('batches.create');
 
-Route::get('batch/{batch}', 'BatchesController@show')->name('batches.show');
+Route::get('batches/{batch}', 'BatchesController@show')->name('batches.show');
 
 Route::post('batches/store', 'BatchesController@store')->name('batches.store');
 
-Route::patch('batches/upload_metadata', 'BatchesController@upload_metadata')->name('batches.upload_metadata');
+Route::patch('batches/{id}/upload_metadata', 'BatchesController@upload_metadata')->name('batches.upload_metadata');
 
-Route::any('batches/transfer_files', 'BatchesController@transfer_files')->name('batches.transfer_files');
+Route::any('batches/{id}/transfer_files', 'BatchesController@transfer_files')->name('batches.transfer_files');
 
-Route::get('batches/begin_transfer/{batch}', 'BatchesController@begin_transfer')->name('batches.begin_transfer');
+Route::get('batches/{batch}/begin_transfer', 'BatchesController@begin_transfer')->name('batches.begin_transfer');
 
 Route::get('record/{record}', 'RecordsController@show');
 
@@ -44,7 +44,6 @@ Route::get('record/{record}', 'RecordsController@show');
 Route::get('metadata_uploaded/{batch}', 'StaticPagesController@metadata_uploaded')->name('static.metadata_uploaded');
 
 Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->name('static.metadata_review');
-
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
 

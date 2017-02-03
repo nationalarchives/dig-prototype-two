@@ -68,6 +68,11 @@ class BatchesController extends Controller
 
         // Redirect if file not present in request
         if ($request->file('transfer_file') === NULL) {
+
+            if ($batch->path_to_transfer_file !== NULL) {
+                return view('batch.show', compact('batch'));
+            }
+
             flash(trans('editorial.batches.transfer_statuses.failure_message', ['batch' => $batch->name]), 'danger');
             return view('batch.begin_transfer', compact('batch'));
         }
