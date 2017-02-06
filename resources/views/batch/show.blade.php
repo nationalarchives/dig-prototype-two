@@ -19,7 +19,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">{{ trans('editorial.batches.show.schema_heading', ['batch' => $batch->name]) }}</div>
                 <div class="panel-body">
-                    <a href="{{ $batch->path_to_schema_file }}">{{ $batch->path_to_schema_file }}</a>
+                    {{ $batch->path_to_schema_file }}
                 </div>
             </div>
         </div>
