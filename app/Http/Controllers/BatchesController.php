@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Batch;
 use App\Series;
 
 class BatchesController extends Controller
 {
-	public function index() {
-		$batches = Batch::all();
-		return view('batch.index', compact('batches'));
-	}
+    public function index()
+    {
+        $batches = Batch::all();
+        return view('batch.index', compact('batches'));
+    }
 
-	public function show(Batch $batch)
+    public function show(Batch $batch)
     {
         return view('batch.show', compact('batch'));
     }
@@ -51,17 +53,16 @@ class BatchesController extends Controller
         }
 
         // Determine route and message based on uploaded filename
-
         $filename = $request->file('metadata_file')->getClientOriginalName();
 
         if ($filename === 'scenario_one.csv') {
             flash(trans('editorial.batches.upload_metadata.validation_failed.problem_with_file', ['batch' => $batch->name]), 'danger');
-            return back();
+            return view('batch.show', compact('batch'));
         }
 
         if ($filename === 'scenario_two.csv') {
             flash(trans('editorial.batches.upload_metadata.validation_failed.does_not_match_schema', ['batch' => $batch->name]), 'danger');
-            return back();
+            return view('batch.show', compact('batch'));
         }
 
         $path_to_stored_file = $request->file('metadata_file')->store('metadata_files');
@@ -72,8 +73,25 @@ class BatchesController extends Controller
 
         flash(trans('editorial.batches.upload_metadata.success_message', ['batch' => $batch->name]), 'success');
 
-        return back();
+        return redirect()->route('batches.review_metadata', compact('batch'));
 
+    }
+
+    public function review_metadata(Batch $batch)
+    {
+        return view('batch.review_metadata', compact('batch'));
+    }
+
+    public function delete_metadata(Batch $batch)
+    {
+
+        Storage::delete($batch->path_to_metadata_file);
+        $batch->path_to_metadata_file = null;
+
+        $batch->save();
+
+        flash(trans('editorial.batches.delete_metadata.success_message', ['batch' => $batch->name]), 'success');
+        return view('batch.show', compact('batch'));
     }
 
     public function begin_transfer(Batch $batch)

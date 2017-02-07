@@ -3,7 +3,6 @@
     <tr>
         <th>&nbsp;</th>
         <th>Difference between DROID report and uploaded CSV
-            <button class="btn btn-default pull-right" id="show-ok">Hide matches</button>
         </th>
     </tr>
     <tr class="success">
@@ -27,7 +26,7 @@
         <th>File sizes</th>
         <td><span class="glyphicon glyphicon-ok"></span> All file sizes match</td>
     </tr>
-    <tr class="danger" style="display: none;">
+    <tr class="danger">
         <th>Closure status</th>
         <td><span class="glyphicon glyphicon-remove"></span> <a href="#">14 closure statuses</a> differ
             between the DROID
