@@ -11,10 +11,10 @@ return [
     | stored in the database or application configuration
     |
     */
-	'introduction' => [
-		'title' => 'Digital Interface for Government',
-		'description' => 'This is a prototype of a standardised access point to the Digital Records Infrastructure (DRI). It covers the validation and upload of born digital records only (commonly referred to as \'Gateway 3\').',
-	],
+    'introduction' => [
+        'title' => 'Digital Interface for Government',
+        'description' => 'This is a prototype of a standardised access point to the Digital Records Infrastructure (DRI). It covers the validation and upload of born digital records only (commonly referred to as \'Gateway 3\').',
+    ],
     'progress_bar' => [
         'metadata_validated' => 'Metadata CSV validated',
         'transfer_initiated' => 'Transfer initiated',
@@ -24,6 +24,9 @@ return [
         'heading' => ':name collections',
         'description' => ' The :collection_number registered collections for :name are shown below',
         'breadcrumb_active' => 'Collections',
+        'show' => [
+            'heading' => 'Series related to the Leveson Inquiry'
+        ],
         'create' => [
             'breadcrumb_active' => 'Create a new collection',
             'title' => 'Create collection',
@@ -53,9 +56,9 @@ return [
         ]
     ],
     'batches' => [
-	    'breadcrumb_active' => 'Batches',
-	    'heading' => ':name batches',
-	    'count_batches' => ' Found :batches_number batches.',
+        'breadcrumb_active' => 'Batches',
+        'heading' => ':name batches',
+        'count_batches' => ' Found :batches_number batches.',
         'show' => [
             'records_heading' => 'View records relating to :batch',
             'schema_heading' => 'Schema for :batch',
