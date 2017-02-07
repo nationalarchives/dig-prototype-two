@@ -57,7 +57,7 @@ return [
 	    'heading' => ':name batches',
 	    'count_batches' => ' Found :batches_number batches.',
         'show' => [
-            'records_heading' => 'Records relating to :batch',
+            'records_heading' => 'View records relating to :batch',
             'schema_heading' => 'Schema for :batch',
             'metadata_uploaded' => 'Summary of metadata for :batch',
             'metadata_upload' => 'Upload metadata for :batch',
