@@ -1,46 +1,171 @@
+//#dragDrop {
+//  width: 100%;
+//  height: 281px;
+//  border: 2px dashed #ddd;
+//  p{
+//    width: 100%;
+//    text-align: center;
+//    line-height: 170px;
+//    color: #9d9d9d;
+//  }
+//  span.glyphicon {
+//    text-align: center;
+//    font-size: 6em;
+//    color: #9d9d9d;
+//    width: 100%;
+//    top: .5em;
+//  }
+//  input{
+//    position: absolute;
+//    margin: 0;
+//    padding: 0;
+//    width: 100%;
+//    height: 285px;
+//    outline: none;
+//    opacity: 0;
+//  }
+//  button{
+//    margin: 0;
+//    color: #fff;
+//    background: #999999;
+//    border: none;
+//    width: 100%;
+//    height: 35px;
+//    margin-top: -20px;
+//    border-bottom: 4px solid #a3a39a;
+//    transition: all .2s ease;
+//    outline: none;
+//  }
+//  button:hover{
+//    background: #cbcbcb;
+//    color: #808080;
+//  }
+//  button:active{
+//    border:0;
+//  }
+//}
+//
 #dragDrop {
-  width: 100%;
-  height: 281px;
-  border: 2px dashed #ddd;
-  p{
+  .file-area {
+    //border: 1px dashed $darkblue;
+    border: 2px dashed #ddd;
     width: 100%;
-    text-align: center;
-    line-height: 170px;
-    color: #9d9d9d;
+    position: relative;
+    margin-bottom: 0;
+
+    input[type=file] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-dummy {
+      width: 100%;
+      padding: 8em;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      text-align: center;
+      transition: background 0.3s ease-in-out;
+
+      .success {
+        display: none;
+      }
+    }
+
+    &:hover .file-dummy {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    input[type=file]:focus + .file-dummy {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    input[type=file]:valid + .file-dummy {
+      border-color: $success;
+      background-color: $success;
+
+      .success {
+        display: inline-block;
+      }
+      .default {
+        display: none;
+      }
+    }
   }
-  span.glyphicon {
-    text-align: center;
-    font-size: 6em;
-    color: #9d9d9d;
+}
+#dragDrop {
+  label {
+    font-weight: 500;
+    display: block;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    overflow: hidden;
+
+    span {
+      float: right;
+      text-transform: none;
+      font-weight: 200;
+      line-height: 1em;
+      font-style: italic;
+      opacity: 0.8;
+    }
+  }
+}
+#dragDrop {
+  .form-controll {
+    display: block;
+    padding: 8px 16px;
     width: 100%;
-    top: .5em;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-weight: 200;
+
+    &:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline: -webkit-focus-ring-color auto 5px;
+    }
   }
-  input{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 285px;
-    outline: none;
-    opacity: 0;
-  }
-  button{
+}
+#dragDrop {
+  .uploadButton {
     margin: 0;
     color: #fff;
     background: #999999;
     border: none;
     width: 100%;
     height: 35px;
-    margin-top: -20px;
     border-bottom: 4px solid #a3a39a;
     transition: all .2s ease;
     outline: none;
   }
-  button:hover{
-    background: #cbcbcb;
-    color: #808080;
-  }
-  button:active{
-    border:0;
+
+  .back-to-article {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 18px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+      background: rgba(0,0,0,0.8);
+    }
   }
 }
