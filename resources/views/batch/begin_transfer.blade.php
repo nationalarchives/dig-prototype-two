@@ -11,18 +11,32 @@
 
 @section('content')
     <h1>{{ trans('editorial.static_pages.begin_transfer.heading') }}</h1>
-    <form action="{{ route('batches.transfer_files', ['id' => $batch->id]) }}" method="post"
-          enctype="multipart/form-data">
+    <form class="dragDrop" action="{{ route('batches.transfer_files', ['id' => $batch->id]) }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <div class="form-group">
+        <div class="form-group file-area">
             <input type="hidden" name="id" value="{{ $batch->id }}">
             <input type="hidden" name="_method" value="PATCH">
-            <label for="reference">{{ trans('editorial.batches.upload.label') }}</label>
-            <input type="file" name="transfer_file">
+            <input type="file" name="transfer_file" required="required" multiple="multiple"/>
+            <div class="file-dummy">
+                <div class="default">
+                    <h4>Drag your files here or click in this area</h4>
+                </div>
+                <div class="success">
+                    <h4>Great, your file(s) are selected and ready to be uploaded.</h4>
+                    <hr/>
+                </div>
+                <div class="success">
+                    <h5>File list</h5>
+                    <ul class="list-group text-left">
+                        <li class="list-group-item">metadata.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
+                        <li class="list-group-item">metadata2.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
+                        <li class="list-group-item">metadata3.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="form-group">
-            <input type="submit" class="btn btn-default">
+            <input class="uploadButton" type="submit" value="Upload file(s)">
         </div>
     </form>
-
 @endsection
