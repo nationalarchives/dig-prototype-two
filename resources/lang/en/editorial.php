@@ -62,7 +62,8 @@ return [
             'metadata_uploaded' => 'Summary of metadata for :batch',
             'metadata_upload' => 'Upload metadata for :batch',
             'proceed_to_transfer' => 'View recommended transfer options for :batch',
-            'begin_transfer' => 'Begin transfer of :batch'
+            'begin_transfer' => 'Begin transfer of :batch',
+            'metadata_review_button' => 'View uploaded metadata'
         ],
         'upload' => [
             'label' => 'Upload metadata'
@@ -73,6 +74,23 @@ return [
             'validation_failed' => [
                 'problem_with_file' => 'The uploaded file is not of the expected type or structure',
                 'does_not_match_schema' => 'The file contents do not match the schema'
+            ]
+        ],
+        'delete_metadata' => [
+            'success_message' => 'Successfully deleted metadata for :batch. Please make any amendments offline and resubmit'
+        ],
+        'review_metadata' => [
+            'breadcrumb' => 'Review uploaded metadata',
+            'heading' => 'Review uploaded metadata for :batch',
+            'description' => 'The uploaded metadata has been validated against the schema. Please review the summary below before proceeding.',
+            'tabs' => [
+                'droid_comparison' => 'Comparison to DROID report',
+                'records_preview' => 'Records preview',
+                'records_summary' => 'Records summary'
+            ],
+            'buttons' => [
+                'delete' => 'Delete and resubmit this metadata',
+                'continue' => 'Save and continue'
             ]
         ],
         'create' => [

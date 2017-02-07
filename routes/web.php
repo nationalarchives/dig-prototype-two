@@ -41,11 +41,13 @@ Route::any('batches/{id}/transfer_files', 'BatchesController@transfer_files')->n
 
 Route::get('batches/{batch}/begin_transfer', 'BatchesController@begin_transfer')->name('batches.begin_transfer');
 
+Route::delete('batches/{batch}/delete_metadata', 'BatchesController@delete_metadata')->name('batches.delete_metadata');
+
+Route::get('batches/{batch}/review_metadata', 'BatchesController@review_metadata')->name('batches.review_metadata');
+
 Route::get('record/{record}', 'RecordsController@show');
 
 // Static pages
-
-Route::get('metadata_review/{batch}', 'StaticPagesController@metadata_review')->name('static.metadata_review');
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
 
