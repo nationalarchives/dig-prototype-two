@@ -27,6 +27,8 @@ Route::get('series', 'SeriesController@index')->name('series.index');
 
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
 
+Route::get('series/create/{collection}', 'SeriesController@create')->name('series.create');
+
 Route::get('batches/create/{series}', 'BatchesController@create')->name('batches.create');
 
 Route::get('batches', 'BatchesController@index')->name('batches.index');
