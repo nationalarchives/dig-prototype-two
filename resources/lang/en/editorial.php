@@ -51,6 +51,19 @@ return [
         'parent_collection' => 'Parent collection',
         'transferring_department' => 'Transferring department',
         'create_batch' => 'Add a new batch to :series',
+	    'create' => [
+	        'heading' => 'Series you are transferring',
+	        'breadcrumb_active' => 'Transferring series',
+		    'description' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',
+		    'identifier' => 'Collection identifier',
+		    'collection_description' => 'Collection description',
+		    'type_of_collection' => 'Collection type',
+		    'collection_type' => 'Born digital',
+		    'creating_body' => 'Creating body',
+		    'transferring_body' => 'Transferring body',
+		    'series_identifier' => 'Series identifier',
+		    'submit_button' => 'Add series'
+	    ],
         'batches' => [
             'heading' => 'Batches within series :series'
         ]
