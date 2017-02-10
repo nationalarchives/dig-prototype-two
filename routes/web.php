@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@index')->name('home.index');
 
 Route::get('departments', 'DepartmentsController@index');
 
+//Collections
 Route::get('collections', 'CollectionsController@index')->name('collections.index');
 
 Route::get('collections/create', 'CollectionsController@create')->name('collections.create');
@@ -23,6 +24,8 @@ Route::post('collections/store', 'CollectionsController@store')->name('collectio
 
 Route::get('collections/{collection}', 'CollectionsController@show')->name('collections.show');
 
+
+//Series
 Route::get('series', 'SeriesController@index')->name('series.index');
 
 Route::get('series/{series}', 'SeriesController@show')->name('series.show');
@@ -31,6 +34,8 @@ Route::get('series/create/{collection}', 'SeriesController@create')->name('serie
 
 Route::post('series/store', 'SeriesController@store')->name('series.store');
 
+
+//Batches
 Route::get('batches/create/{series}', 'BatchesController@create')->name('batches.create');
 
 Route::get('batches', 'BatchesController@index')->name('batches.index');
@@ -49,6 +54,8 @@ Route::delete('batches/{batch}/delete_metadata', 'BatchesController@delete_metad
 
 Route::get('batches/{batch}/review_metadata', 'BatchesController@review_metadata')->name('batches.review_metadata');
 
+
+//Records
 Route::get('record/{record}', 'RecordsController@show');
 
 // Static pages

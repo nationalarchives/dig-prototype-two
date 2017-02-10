@@ -10,7 +10,6 @@
     <form action="{{ route('batches.store') }}" method="post" enctype="multipart/form-data">
 
         {{ csrf_field() }}
-
         <input type="hidden" name="series_id" value="{{ $series->id }}">
 
         <div class="form-group">

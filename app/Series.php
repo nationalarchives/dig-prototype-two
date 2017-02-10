@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Series extends Model
 {
+	protected $fillable = ['collectionIdentifier', 'collectionDescription', 'creatingBody', 'transferringBody', 'seriesIdentifier'];
+
     public function collection()
     {
         return $this->belongsTo(Collection::class);

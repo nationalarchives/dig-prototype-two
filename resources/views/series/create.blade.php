@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('page_specific_breadcrumbs')
+    {{--<li><a href="{{ route('collection.show', ['id' => $collection->id] )}}">{{ $series->reference }}</a></li>--}}
     <li class="active">{{ trans('editorial.series.create.breadcrumb_active') }}</li>
 @endsection
 
@@ -11,7 +12,7 @@
     <form action="{{ route('series.store') }}" method="post" enctype="multipart/form-data">
 
         {{ csrf_field() }}
-        <input type="hidden" name="collection_id" value="{{ $collection->collection_id }}">
+        <input type="hidden" name="collection_id" value="{{ $collection->id }}">
 
         <div class="form-group">
             <label for="collectionIdentifier">{{ trans('editorial.series.create.identifier') }}</label>

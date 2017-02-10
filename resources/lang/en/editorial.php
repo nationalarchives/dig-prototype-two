@@ -62,7 +62,8 @@ return [
 		    'creating_body' => 'Creating body',
 		    'transferring_body' => 'Transferring body',
 		    'series_identifier' => 'Series identifier',
-		    'submit_button' => 'Add series'
+		    'submit_button' => 'Add series',
+		    'transfer_series_button' => 'Transfer series'
 	    ],
         'batches' => [
             'heading' => 'Batches within series :series'
