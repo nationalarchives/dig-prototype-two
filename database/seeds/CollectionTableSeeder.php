@@ -11,6 +11,9 @@ class CollectionTableSeeder extends Seeder
      */
     public function run()
     {
-        $collection = factory(App\Collection::class, 1)->create();
+        factory(App\Collection::class, 1)->create([
+            'reference' => 'TNARC',
+            'name' => 'TNA Corporate Records'
+        ]);
     }
 }

@@ -26,7 +26,8 @@ return [
         'description_singular' => ' The :collection_number registered collection for :name are shown below',
         'breadcrumb_active' => 'Collections',
         'show' => [
-            'heading' => 'Series related to the Leveson Inquiry'
+            'heading' => 'Series related to the Leveson Inquiry',
+            'create_series' => 'Create series'
         ],
         'create' => [
             'breadcrumb_active' => 'Create a new collection',
@@ -54,6 +55,18 @@ return [
         'create_batch' => 'Add a new batch to :series',
         'batches' => [
             'heading' => 'Batches within series :series'
+        ],
+        'create' => [
+            'breadcrumb_active' => 'Create a series within :collection',
+            'labels' => [
+                'reference' => 'Reference',
+                'name' => 'Name',
+                'description' => 'Description',
+                'type' => 'Type'
+            ]
+        ],
+        'store' => [
+            'success_message' => 'Successfully created series :name'
         ]
     ],
     'batches' => [
