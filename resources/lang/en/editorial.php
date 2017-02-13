@@ -23,6 +23,7 @@ return [
     'collections' => [
         'heading' => ':name collections',
         'description' => ' The :collection_number registered collections for :name are shown below',
+        'description_singular' => ' The :collection_number registered collection for :name are shown below',
         'breadcrumb_active' => 'Collections',
         'show' => [
             'heading' => 'Series related to the Leveson Inquiry'

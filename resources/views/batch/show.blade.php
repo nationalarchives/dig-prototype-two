@@ -12,7 +12,9 @@
     @include('partials.progress-bar', ['batch' => $batch])
     <h1 class="page-header">{{ $batch->name }}</h1>
     @if($batch->metadataHasBeenUploaded())
-        @include('partials.begin-transfer')
+        @unless ($batch->filesTransferred())
+            @include('partials.begin-transfer')
+        @endunless
     @endif
     <div class="row">
         <div class="col-md-6">
