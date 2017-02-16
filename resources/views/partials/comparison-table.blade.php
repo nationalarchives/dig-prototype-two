@@ -6,7 +6,7 @@
         </th>
     </tr>
     <tr class="success">
-        <th>Resource identifiers</th>
+        <th>File path</th>
         <td><span class="glyphicon glyphicon-ok"></span> All 1,234 identifiers match</td>
     </tr>
     <tr class="success">
