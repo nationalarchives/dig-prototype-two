@@ -14,6 +14,13 @@
     <!-- Font from Google -->
     <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans:400,700" rel="stylesheet">
 
+    <!-- Modernizr -->
+    <script src="/dist/modernizr-development-build.min.js"></script>
+
+    <!-- Apply respond.js for older IE only -->
+    <!--[if lt IE 9]>
+        <script src="/dist/respond.min.js"></script>
+    <![endif]-->
 
     <!-- Scripts -->
     <script>
@@ -21,4 +28,6 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+
+
 </head>
