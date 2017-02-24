@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>Prototype not currently available</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -14,7 +14,6 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                color: #B0BEC5;
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato', sans-serif;
@@ -32,15 +31,18 @@
             }
 
             .title {
-                font-size: 72px;
                 margin-bottom: 40px;
+                font-size: 1.5em;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">
+                    <h1>{{ trans('editorial.static_pages.maintenance_view.heading') }}</h1>
+                    <p>{{ trans('editorial.static_pages.maintenance_view.message') }}</p>
+                </div>
             </div>
         </div>
     </body>
