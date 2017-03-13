@@ -183,5 +183,8 @@ return [
             'heading' => 'This prototype is not currently available',
             'message' => 'It is currently in maintenance mode and will be reactivated for user testing sessions.'
         ]
+    ],
+    'admin' => [
+        'heading' => 'Prototype administration'
     ]
 ];

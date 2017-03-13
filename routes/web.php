@@ -51,6 +51,8 @@ Route::get('batches/{batch}/review_metadata', 'BatchesController@review_metadata
 
 Route::get('record/{record}', 'RecordsController@show');
 
+Route::get('admin', 'AdminController@show_form')->name('admin.show_form');
+
 // Static pages
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');
