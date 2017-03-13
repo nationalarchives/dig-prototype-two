@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Artisan;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function show_form()
     {
         return view('admin.show_form');
