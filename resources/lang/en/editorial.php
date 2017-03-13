@@ -185,6 +185,12 @@ return [
         ]
     ],
     'admin' => [
-        'heading' => 'Prototype administration'
+        'heading' => 'Prototype administration',
+        'refresh_and_seed_database_success' => 'Successfully cleared the database ready for the next session',
+        'refresh_and_seed_database_failure' => 'Something went wrong and we were unable to clear database for next session',
+        'refresh_and_seed_database_form' => [
+            'label_text' => 'Refresh the database (removes all information added by users)',
+            'button_text' => 'Go'
+        ]
     ]
 ];

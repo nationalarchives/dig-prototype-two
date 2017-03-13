@@ -53,6 +53,8 @@ Route::get('record/{record}', 'RecordsController@show');
 
 Route::get('admin', 'AdminController@show_form')->name('admin.show_form');
 
+Route::post('admin', 'AdminController@refresh_and_seed_database')->name('admin.refresh_and_seed_database');
+
 // Static pages
 
 Route::get('guidance', 'StaticPagesController@guidance')->name('static.guidance');

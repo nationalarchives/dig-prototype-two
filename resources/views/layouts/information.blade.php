@@ -4,6 +4,7 @@
 <body>
 <div id="app">
     <div class="container">
+        @include('partials.flash-messages')
         @yield('content')
     </div>
 </div>
