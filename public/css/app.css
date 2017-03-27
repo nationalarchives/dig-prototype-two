@@ -7826,7 +7826,7 @@ main a {
 }
 
 .success {
-  background-color: #eeffe7;
+  background-color: #cfe2c4;
 }
 
 .notification-panel .message::after {
@@ -8033,8 +8033,8 @@ a:hover .panel-body {
 }
 
 .dragDrop .file-area input[type=file]:valid + .file-dummy {
-  border-color: #eeffe7;
-  background-color: #eeffe7;
+  border-color: #cfe2c4;
+  background-color: #cfe2c4;
 }
 
 .dragDrop .file-area input[type=file]:valid + .file-dummy .success {
@@ -8101,9 +8101,9 @@ a:hover .panel-body {
   border: 1px solid #ccc;
 }
 
-.progress-status .success:hover {
+.progress-status .success:hover, .progress-status .success:focus {
   cursor: default;
-  background-color: #eeffe7;
+  background-color: #cfe2c4;
 }
 
 .progress-status .glyphicon-ok {
