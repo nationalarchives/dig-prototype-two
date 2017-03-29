@@ -15,7 +15,7 @@
             Droid report
         </td>
     </tr>
-    <tr class="danger">
+    <tr class="warning">
         <th>File names and checksums</th>
         <td><span class="glyphicon glyphicon-remove"></span> 8 file names differ between
             the DROID report
@@ -26,7 +26,7 @@
         <th>File sizes</th>
         <td><span class="glyphicon glyphicon-ok"></span> All file sizes match</td>
     </tr>
-    <tr class="danger">
+    <tr class="warning">
         <th>Closure status</th>
         <td><span class="glyphicon glyphicon-remove"></span> 14 closure statuses don't match ASSR
         </td>
