@@ -1,7 +1,7 @@
 .dragDrop {
   .file-area {
     //border: 1px dashed $darkblue;
-    border: 2px dashed #ddd;
+    border: 5px dashed #ddd;
     width: 100%;
     position: relative;
     margin-bottom: 0;
@@ -89,16 +89,15 @@
     }
   }
 }
-.dragDrop {
-  .uploadButton {
-    margin: 0;
-    color: #fff;
-    background: #999999;
-    border: none;
-    width: 100%;
-    height: 35px;
-    border-bottom: 4px solid #a3a39a;
-    transition: all .2s ease;
-    outline: none;
-  }
+
+  .uploadButton > input {
+      margin: 0;
+      color: #fff;
+      background: #999999;
+      border: none;
+      width: 100%;
+      height: 3.5em;
+      border-bottom: 4px solid #a3a39a;
+      transition: all .2s ease;
+      outline: none;
 }

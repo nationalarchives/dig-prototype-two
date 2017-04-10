@@ -7826,7 +7826,7 @@ main a {
 }
 
 .success {
-  background-color: #eeffe7;
+  background-color: #cfe2c4;
 }
 
 .notification-panel .message::after {
@@ -7840,6 +7840,10 @@ main a {
   right: -0.35em;
   top: -0.3em;
   border-radius: 50%;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
 }
 
 .sidebar {
@@ -7991,7 +7995,7 @@ a:hover .panel-body {
 }
 
 .dragDrop .file-area {
-  border: 2px dashed #ddd;
+  border: 5px dashed #ddd;
   width: 100%;
   position: relative;
   margin-bottom: 0;
@@ -8033,8 +8037,8 @@ a:hover .panel-body {
 }
 
 .dragDrop .file-area input[type=file]:valid + .file-dummy {
-  border-color: #eeffe7;
-  background-color: #eeffe7;
+  border-color: #cfe2c4;
+  background-color: #cfe2c4;
 }
 
 .dragDrop .file-area input[type=file]:valid + .file-dummy .success {
@@ -8078,13 +8082,13 @@ a:hover .panel-body {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.dragDrop .uploadButton {
+.uploadButton > input {
   margin: 0;
   color: #fff;
   background: #999999;
   border: none;
   width: 100%;
-  height: 35px;
+  height: 3.5em;
   border-bottom: 4px solid #a3a39a;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -8101,9 +8105,9 @@ a:hover .panel-body {
   border: 1px solid #ccc;
 }
 
-.progress-status .success:hover {
+.progress-status .success:hover, .progress-status .success:focus {
   cursor: default;
-  background-color: #eeffe7;
+  background-color: #cfe2c4;
 }
 
 .progress-status .glyphicon-ok {

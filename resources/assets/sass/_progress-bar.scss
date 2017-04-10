@@ -4,9 +4,9 @@
     background-color: #fff;
     border: 1px solid #ccc;
   }
-  .success:hover {
+  .success:hover, .success:focus {
     cursor: default;
-    background-color: #eeffe7;
+    background-color: $success;
   }
   margin-bottom: 20px;
   .glyphicon-ok {

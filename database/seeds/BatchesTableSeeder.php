@@ -24,7 +24,7 @@ class BatchesTableSeeder extends Seeder
                 'series_id' => $series->id,
                 'name' => $series->reference . 'Y17B002',
                 'path_to_schema_file' => 'metadata_v9_' . $series->reference . 'Y17B0002' . '.csvs',
-                'path_to_metadata_file' => false,
+                'path_to_metadata_file' => 'something.csv',
             ]);
 
         }

@@ -28,15 +28,13 @@
                 <div class="success">
                     <h5>File list</h5>
                     <ul class="list-group text-left">
-                        <li class="list-group-item">metadata.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
-                        <li class="list-group-item">metadata2.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
-                        <li class="list-group-item">metadata3.csv <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
+                        <li class="list-group-item">Transfer_file.pdf <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
                     </ul>
+                    <div class="form-group uploadButton">
+                        Y<input type="submit" value="Upload file(s)">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <input class="uploadButton" type="submit" value="Upload file(s)">
         </div>
     </form>
 @endsection

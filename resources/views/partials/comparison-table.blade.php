@@ -7,37 +7,37 @@
     </tr>
     <tr class="success">
         <th>File path</th>
-        <td><span class="glyphicon glyphicon-ok"></span> All 1,234 identifiers match</td>
+        <td>All 1,234 identifiers match</td>
     </tr>
     <tr class="success">
         <th>Number of files and folders</th>
-        <td><span class="glyphicon glyphicon-ok"></span> Files described in uploaded metadata match those in
+        <td>Files described in uploaded metadata match those in
             Droid report
         </td>
     </tr>
-    <tr class="danger">
+    <tr class="warning">
         <th>File names and checksums</th>
-        <td><span class="glyphicon glyphicon-remove"></span> 8 file names differ between
+        <td>8 file names differ between
             the DROID report
             and metadata CSV
         </td>
     </tr>
     <tr class="success">
         <th>File sizes</th>
-        <td><span class="glyphicon glyphicon-ok"></span> All file sizes match</td>
+        <td>All file sizes match</td>
     </tr>
-    <tr class="danger">
+    <tr class="warning">
         <th>Closure status</th>
-        <td><span class="glyphicon glyphicon-remove"></span> 14 closure statuses don't match ASSR
+        <td>14 closure statuses don't match ASSR
         </td>
     </tr>
     <tr class="success">
         <th>File types</th>
-        <td><span class="glyphicon glyphicon-ok"></span> All file types match</td>
+        <td>All file types match</td>
     </tr>
     <tr class="success">
         <th>Last modified date</th>
-        <td><span class="glyphicon glyphicon-ok"></span> All modification dates match</td>
+        <td>All modification dates match</td>
     </tr>
     </tbody>
 </table>
