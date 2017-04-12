@@ -1,6 +1,5 @@
 .dragDrop {
   .file-area {
-    //border: 1px dashed $darkblue;
     border: 5px dashed #ddd;
     width: 100%;
     position: relative;
@@ -40,7 +39,7 @@
       outline: -webkit-focus-ring-color auto 5px;
     }
 
-    input[type=file]:valid + .file-dummy {
+    input[type=file]:valid + .file-dummy  {
       border-color: $success;
       background-color: $success;
 
@@ -61,15 +60,16 @@
     }
   }
 }
+
 .dragDrop {
-    span {
-      float: right;
-      text-transform: none;
-      font-weight: 200;
-      line-height: 1em;
-      font-style: italic;
-      opacity: 0.8;
-    }
+  span {
+    float: right;
+    text-transform: none;
+    font-weight: 200;
+    line-height: 1em;
+    font-style: italic;
+    opacity: 0.8;
+  }
 }
 
 #dragDrop {
@@ -90,14 +90,30 @@
   }
 }
 
-  .uploadButton > input {
-      margin: 0;
-      color: #fff;
-      background: #999999;
-      border: none;
-      width: 100%;
-      height: 3.5em;
-      border-bottom: 4px solid #a3a39a;
-      transition: all .2s ease;
-      outline: none;
+.uploadButton > input {
+  margin: 0;
+  color: #fff;
+  background: #999999;
+  border: none;
+  width: 100%;
+  height: 3.5em;
+  border-bottom: 4px solid #a3a39a;
+  transition: all .2s ease;
+  outline: none;
 }
+.uploadButton {
+  margin-bottom: 0;
+  min-height: 2em;
+}
+
+.file-area > .success {
+  position: relative;
+}
+
+.file-area > input[type=file] + .file-dummy + .success {
+  display: none;
+}
+.file-area > input[type=file]:valid + .file-dummy + .success {
+  display: block;
+}
+

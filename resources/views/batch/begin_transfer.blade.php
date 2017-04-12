@@ -30,9 +30,11 @@
                     <ul class="list-group text-left">
                         <li class="list-group-item">Transfer_file.pdf <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>
                     </ul>
-                    <div class="form-group uploadButton">
-                        Y<input type="submit" value="Upload file(s)">
-                    </div>
+                </div>
+            </div>
+            <div class="success">
+                <div class="form-group uploadButton">
+                    <button type="button" class="btn btn-block">Click to submit file(s)</button>
                 </div>
             </div>
         </div>
