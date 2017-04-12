@@ -8095,6 +8095,23 @@ a:hover .panel-body {
   outline: none;
 }
 
+.uploadButton {
+  margin-bottom: 0;
+  min-height: 2em;
+}
+
+.file-area > .success {
+  position: relative;
+}
+
+.file-area > input[type=file] + .file-dummy + .success {
+  display: none;
+}
+
+.file-area > input[type=file]:valid + .file-dummy + .success {
+  display: block;
+}
+
 .progress-status {
   margin-bottom: 20px;
 }
