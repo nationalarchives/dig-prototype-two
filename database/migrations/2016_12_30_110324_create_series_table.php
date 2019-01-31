@@ -18,7 +18,7 @@ class CreateSeriesTable extends Migration
             $table->timestamps();
             $table->string('reference');
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->string('type');
             $table->integer('collection_id')->unsigned()->index();
         });
